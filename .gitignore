@@ -1,0 +1,5 @@
+.idea
+*.exe
+*.msi
+node_modules
+bower_components
