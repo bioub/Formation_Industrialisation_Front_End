@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mon Site</title>
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+    <style>
+        body {
+            position: relative;
+        }
+    </style>
+</head>
+<body data-spy="scroll" data-target="#menu">
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                    data-target="#menu" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">Mon site vitrine</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="menu">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="#introduction">Introduction <span class="sr-only">(current)</span></a></li>
+                <li><a href="#presentation">Présentation</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#" data-toggle="modal" data-target="#contact">Contact</a></li>
+            </ul>
+        </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+</nav>
+<div id="introduction" class="jumbotron text-center">
+    <h1>Un super site</h1>
+    <p>Et son pas si mauvais slogan</p>
+    <p><a class="btn btn-primary btn-lg" href="#" role="button" data-toggle="modal" data-target="#contact">Contact</a></p>
+</div>
+<div id="presentation" class="container">
+    <div class="row">
+        <div class="col-md-4">
+            <p><span class="glyphicon glyphicon-alert"></span></p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores atque aut consequatur debitis eaque,
+                explicabo fugit hic id illum ipsum iste, iusto numquam quam quasi quibusdam quis repudiandae sint
+                tempora!</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores atque aut consequatur debitis eaque,
+                explicabo fugit hic id illum ipsum iste, iusto numquam quam quasi quibusdam quis repudiandae sint
+                tempora!</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores atque aut consequatur debitis eaque,
+                explicabo fugit hic id illum ipsum iste, iusto numquam quam quasi quibusdam quis repudiandae sint
+                tempora!</p>
+            <p><a href="#">Un lien</a></p>
+        </div>
+        <div class="col-md-4">
+            <p><span class="glyphicon glyphicon-bullhorn"></span></p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores atque aut consequatur debitis eaque,
+                explicabo fugit hic id illum ipsum iste, iusto numquam quam quasi quibusdam quis repudiandae sint
+                tempora!</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores atque aut consequatur debitis eaque,
+                explicabo fugit hic id illum ipsum iste, iusto numquam quam quasi quibusdam quis repudiandae sint
+                tempora!</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores atque aut consequatur debitis eaque,
+                explicabo fugit hic id illum ipsum iste, iusto numquam quam quasi quibusdam quis repudiandae sint
+                tempora!</p>
+            <p><a href="#">Un lien</a></p>
+        </div>
+        <div class="col-md-4">
+            <p><span class="glyphicon glyphicon-education"></span></p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores atque aut consequatur debitis eaque,
+                explicabo fugit hic id illum ipsum iste, iusto numquam quam quasi quibusdam quis repudiandae sint
+                tempora!</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores atque aut consequatur debitis eaque,
+                explicabo fugit hic id illum ipsum iste, iusto numquam quam quasi quibusdam quis repudiandae sint
+                tempora!</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores atque aut consequatur debitis eaque,
+                explicabo fugit hic id illum ipsum iste, iusto numquam quam quasi quibusdam quis repudiandae sint
+                tempora!</p>
+            <p><a href="#">Un lien</a></p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-3">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores atque aut consequatur debitis eaque,
+                explicabo fugit hic id illum ipsum iste, iusto numquam quam quasi quibusdam quis repudiandae sint
+                tempora!</p>
+        </div>
+        <div class="col-md-9">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores atque aut consequatur debitis eaque,
+                explicabo fugit hic id illum ipsum iste, iusto numquam quam quasi quibusdam quis repudiandae sint
+                tempora!</p>
+        </div>
+    </div>
+</div>
+<div id="contact" class="modal fade" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">Contact</h4>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Email address</label>
+                        <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea class="form-control" id="message" placeholder="Votre message"></textarea>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Fermer</button>
+                <button type="button" class="btn btn-primary">Contact</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+<script src="bower_components/jquery/dist/jquery.js"></script>
+<script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+</body>
+</html>
