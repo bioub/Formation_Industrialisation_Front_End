@@ -3,12 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <title>Mon Site</title>
-    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
-    <style>
-        body {
-            position: relative;
-        }
-    </style>
+    <!--<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">-->
+    <link rel="stylesheet" href="css/app.css">
 </head>
 <body data-spy="scroll" data-target="#menu">
 <nav class="navbar navbar-default navbar-fixed-top">
@@ -40,6 +36,7 @@
 <div id="introduction" class="jumbotron text-center">
     <h1>Un super site</h1>
     <p>Et son pas si mauvais slogan</p>
+    <p id="horloge"></p>
     <p><a class="btn btn-primary btn-lg" href="#" role="button" data-toggle="modal" data-target="#contact">Contact</a></p>
 </div>
 <div id="presentation" class="container">
@@ -125,5 +122,14 @@
 </div><!-- /.modal -->
 <script src="bower_components/jquery/dist/jquery.js"></script>
 <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+<script src="bower_components/system.js/dist/system.js"></script>
+<script>
+    System.config({
+        baseURL: '/MonSite/src/',
+        defaultJSExtensions: true
+    });
+
+    System.import('js/main');
+</script>
 </body>
 </html>
