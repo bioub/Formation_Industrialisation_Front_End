@@ -1,3 +1,4 @@
+'use strict';
 
 // 1 - Manipuler des objets existants
 console.log(Math.sqrt(9)); // 3
@@ -18,6 +19,11 @@ var coords = {
     x: 10,
     y: 23
 };
+var jsonFromCoords = JSON.stringify(coords);
+
+var json = '{"x": 10, "y": 23}';
+var coordsFromJSON = JSON.parse(json);
+console.log(coordsFromJSON.x);
 
 function creerBouton(valeur, largeur, hauteur, couleurFond, couleurTexte) {
 
@@ -46,7 +52,21 @@ Contact.prototype.hello = function() {
 };
 
 var romain = new Contact('Romain');
+
 console.log(typeof Contact); // function
 console.log(typeof romain); // object
 console.log(romain.prenom); // Romain
 console.log(romain.hello()); // Romain
+
+class Personne {
+    constructor(prenom) {
+        this.prenom = prenom;
+    }
+    hello() {
+        return `Bonjour je m'appelle ${this.prenom}`;
+    }
+}
+
+var eric = new Personne('Eric');
+console.log(eric.hello());
+console.log(typeof Personne); // function
