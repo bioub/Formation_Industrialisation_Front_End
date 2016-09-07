@@ -1,0 +1,1 @@
+"use strict";function _interopRequireDefault(a){return a&&a.__esModule?a:{default:a}}var _horloge=require("./horloge"),_horloge2=_interopRequireDefault(_horloge),divElt=document.querySelector("#horloge"),horloge=new _horloge2.default(divElt);
