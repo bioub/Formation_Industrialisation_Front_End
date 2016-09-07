@@ -1,4 +1,5 @@
 module.exports = function(grunt) {
+    require('time-grunt')(grunt);
 
     grunt.loadNpmTasks('grunt-autoprefixer');
     grunt.loadNpmTasks('grunt-babel');
@@ -18,10 +19,25 @@ module.exports = function(grunt) {
         usemin: {
             dist: 'dist/index.html'
         },
+        babel: {
+            options: {
+                sourceMap: true
+            },
+            dev: {
+                expand: true,
+                cwd: 'src/es6',
+                src: '*.js',
+                dest: 'src/js',
+            }
+        },
         watch: {
             less: {
                 files: ['src/less/**/*.less'],
                 tasks: ['less:dev', 'autoprefixer:dev']
+            },
+            es6: {
+                files: ['src/es6/**/*.js'],
+                tasks: ['babel:dev']
             },
         },
         autoprefixer: {
@@ -74,7 +90,11 @@ module.exports = function(grunt) {
         },
     });
 
+    grunt.registerTask('lessprefix', ['less:dev', 'autoprefixer:dev']);
+
     grunt.registerTask('dist', [
+        'lessprefix',
+        'babel:dev',
         'clean:predist',
         'useminPrepare:dist',
         'concat:generated',
